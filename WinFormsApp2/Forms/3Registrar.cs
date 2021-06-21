@@ -43,14 +43,14 @@ namespace IsteaTVInternetCompany
             }
             else
             {
-                Cliente cl = new Cliente()
+                Usuario cl = new Usuario()
                 {
-                    Usuario = usuario,
+                    Nombre = usuario,
                     Clave = clave,
                     Pregunta = pregunta,
                     Respuesta = respuesta
                 };
-                BaseDeDatos.Clientes.Add(cl);
+                BaseDeDatos.Usuarios.Add(cl);
 
                 MessageBox.Show("Usuario creado con exito!");
 

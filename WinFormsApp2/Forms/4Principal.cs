@@ -19,7 +19,7 @@ namespace IsteaTVInternetCompany
             InitializeComponent();
             textoDeForm1 = Principal.usuarioTextBox;
             index = indexUsuario;
-            this.NombreUsuarioLabel.Text = BaseDeDatos.Clientes[index].Usuario;
+            this.NombreUsuarioLabel.Text = BaseDeDatos.Usuarios[index].Nombre;
             this.LogOutLabel.Click += LogOutLabel_Click;
             this.btnClientes.MouseHover += BtnClientes_MouseHover;
             this.btnClientes.MouseLeave += BtnClientes_MouseLeave;

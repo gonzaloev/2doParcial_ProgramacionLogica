@@ -12,20 +12,20 @@ namespace IsteaTVInternetCompany
 {
     public partial class TitularesItem : UserControl
     {
-        public Titular Titular;
+        public Cliente Titular;
         public TitularesItem()
         {
             InitializeComponent();
         }
 
-        public TitularesItem(Titular titular)
+        public TitularesItem(Cliente titular)
         {
             InitializeComponent();
             VerButton.Click += VerButton_Click;
             SetTitular(titular);
         }
 
-        void SetTitular(Titular titular)
+        void SetTitular(Cliente titular)
         {
             Titular = titular;
             NombreLabel.Text = $"{Titular.Nombre}";

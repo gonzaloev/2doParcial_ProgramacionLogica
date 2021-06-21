@@ -16,7 +16,7 @@ namespace IsteaTVInternetCompany
         {
             InitializeComponent();
             //BaseDeDatos.CargarTitular();
-            listaDeTitularesControlcs1.SetItems(BaseDeDatos.Titulares);
+            listaDeTitularesControlcs1.SetItems(BaseDeDatos.Clientes);
 
             buscarBox.TextChanged += BuscarBox_TextChanged;
             nuevoBtn.Click += NuevoBtn_Click;
@@ -35,7 +35,7 @@ namespace IsteaTVInternetCompany
         {
             AplicarFiltro();
         }
-        bool FiltroDePersonas(Titular t)
+        bool FiltroDePersonas(Cliente t)
         {
             string filtro = buscarBox.Text.ToUpper();
             return filtro.Length < 2 || (t.Nombre.ToUpper().Contains(filtro));
@@ -50,7 +50,7 @@ namespace IsteaTVInternetCompany
 
         void RefrescarLista()
         {
-            listaDeTitularesControlcs1.SetItems(BaseDeDatos.Titulares);
+            listaDeTitularesControlcs1.SetItems(BaseDeDatos.Clientes);
             AplicarFiltro();
         }
 

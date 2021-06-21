@@ -19,7 +19,7 @@ namespace IsteaTVInternetCompany
             FLPanel.SizeChanged += FLPanel_SizeChanged;
         }
 
-        public void SetItems(List<Titular> titulares)
+        public void SetItems(List<Cliente> titulares)
         {
             FLPanel.Controls.Clear();
             Items.Clear();
@@ -34,7 +34,7 @@ namespace IsteaTVInternetCompany
             }
         }
 
-        public void Filtrar(Predicate<Titular> predicate)
+        public void Filtrar(Predicate<Cliente> predicate)
         {
             for(int i = 0; i < Items.Count; i++)
             {

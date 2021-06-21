@@ -54,27 +54,27 @@ namespace IsteaTVInternetCompany
             {
                 
 
-                Titular ti = new Titular()
+                Cliente ti = new Cliente()
                 {
                     Nombre = this.nombreBox.Text,
                     Nro = this.nroClienteBox.Text,
                     DNI = this.dniBox.Text,
                     Estatus = this.activoCheck.Checked,
-                    TContacto = new Contacto()
+                    Contacto = new Contacto()
                     {
                         email = this.emailBox.Text,
                         telefono = this.telefonoBox.Text
                     },
-                    TDomicilio = new Domicilio()
+                    Domicilio = new Domicilio()
                     {
                         Direccion = this.direccionBox.Text,
                         Localidad = this.localidadBox.Text,
                         Provincia = this.provinciaBox.Text
                     },
-                    TPlan = (Plan)this.planCombo.SelectedItem
+                    Plan = (Plan)this.planCombo.SelectedItem
                     
                 };
-                BaseDeDatos.Titulares.Add(ti);
+                BaseDeDatos.Clientes.Add(ti);
                 MessageBox.Show("Cliente creado con exito");
                 this.Hide();
             } 

@@ -16,7 +16,9 @@ namespace IsteaTVInternetCompany
         public Principal()
         {
             InitializeComponent();
-            BaseDeDatos.CargarCliente();
+            
+            //GAW: Esto duplica informacion.
+            //BaseDeDatos.CargarUsuarios();
         }
         public static string usuarioTextBox;
 
@@ -35,7 +37,7 @@ namespace IsteaTVInternetCompany
 
         private void ingresarBtn_Click(object sender, EventArgs e)
         {
-            int indexUsuario = BaseDeDatos.Clientes.FindIndex((Cliente elem) => elem.Usuario == this.usuarioBox.Text && elem.Clave == this.claveBox.Text);
+            int indexUsuario = BaseDeDatos.Usuarios.FindIndex((Usuario elem) => elem.Nombre == this.usuarioBox.Text && elem.Clave == this.claveBox.Text);
             if (indexUsuario > -1)
             {
                 Principal2 form = new Principal2(indexUsuario);
@@ -49,7 +51,7 @@ namespace IsteaTVInternetCompany
 
         private void olvideClaveLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            int indexUsuario = BaseDeDatos.Clientes.FindIndex((Cliente elem) => elem.Usuario == this.usuarioBox.Text);
+            int indexUsuario = BaseDeDatos.Usuarios.FindIndex((Usuario elem) => elem.Nombre == this.usuarioBox.Text);
             if (indexUsuario > -1)
             {
                 RecuperacionClave form = new RecuperacionClave(indexUsuario);
