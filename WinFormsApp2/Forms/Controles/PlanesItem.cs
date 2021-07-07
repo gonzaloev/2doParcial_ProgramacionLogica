@@ -23,7 +23,7 @@ namespace IsteaTVInternetCompany
             SetPlan(plan);
         }
 
-        public void SetPlan(Plan plan)
+        void SetPlan(Plan plan)
         {
             Plan = plan;
             PlanLabel.Text = Plan.Nombre;
@@ -32,11 +32,5 @@ namespace IsteaTVInternetCompany
             InternetLabel.Text = Plan.Internet;
         }
 
-       
-       
-        private void PrecioNumericUpDown_ValueChanged(object sender, EventArgs e)
-        {
-          
-        }
     }
 }
