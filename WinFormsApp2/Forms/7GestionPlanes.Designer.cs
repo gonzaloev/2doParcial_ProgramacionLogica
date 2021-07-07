@@ -77,6 +77,7 @@ namespace IsteaTVInternetCompany
             // 
             // listaDePlanes1
             // 
+            this.listaDePlanes1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.listaDePlanes1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listaDePlanes1.Location = new System.Drawing.Point(27, 73);
             this.listaDePlanes1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -98,7 +99,7 @@ namespace IsteaTVInternetCompany
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Form8";
-            this.Text = "Gestion de Planes";
+            this.Text = "Gestion de Planes";            
             this.ResumeLayout(false);
             this.PerformLayout();
 

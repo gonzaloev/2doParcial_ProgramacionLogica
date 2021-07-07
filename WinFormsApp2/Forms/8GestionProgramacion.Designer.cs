@@ -99,7 +99,6 @@ namespace IsteaTVInternetCompany
             this.MaximizeBox = false;
             this.Name = "GestionProgramacion";
             this.Text = "Gestion de Programación";
-            this.Load += new System.EventHandler(this.GestionProgramacion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -52,7 +52,7 @@ namespace IsteaTVInternetCompany
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 16);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Plan:";            
+            this.label1.Text = "Plan:";
             // 
             // label2
             // 
@@ -127,9 +127,14 @@ namespace IsteaTVInternetCompany
             // 
             this.PrecioNumericUpDown.Location = new System.Drawing.Point(207, 9);
             this.PrecioNumericUpDown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PrecioNumericUpDown.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.PrecioNumericUpDown.Name = "PrecioNumericUpDown";
             this.PrecioNumericUpDown.Size = new System.Drawing.Size(83, 23);
-            this.PrecioNumericUpDown.TabIndex = 7;
+            this.PrecioNumericUpDown.TabIndex = 7;            
             // 
             // panel1
             // 

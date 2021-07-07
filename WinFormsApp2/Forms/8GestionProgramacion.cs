@@ -52,52 +52,5 @@ namespace IsteaTVInternetCompany
         }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        //BORRAR
-        private void GestionProgramacion_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void lblCanal_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }
