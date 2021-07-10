@@ -37,7 +37,6 @@ namespace IsteaTVInternetCompany
             this.NombreLabel.Text = $"{Pelicula.Nombre}";
             this.DuracionLabel.Text = $"{Pelicula.Duracion}";
             this.dateTimePicker.Value = Pelicula.HHHorario;
-        }
-               
+        } 
     }
 }
