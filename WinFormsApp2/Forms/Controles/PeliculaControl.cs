@@ -22,6 +22,12 @@ namespace IsteaTVInternetCompany
         {
             InitializeComponent();
             SetCanal(pelicula);
+            dateTimePicker.ValueChanged += DateTimePicker_ValueChanged;
+        }
+
+        private void DateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            Pelicula.HHHorario = this.dateTimePicker.Value;
         }
 
         void SetCanal(Pelicula pelicula)

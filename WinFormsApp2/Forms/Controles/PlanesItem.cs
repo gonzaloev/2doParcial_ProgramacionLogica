@@ -21,6 +21,12 @@ namespace IsteaTVInternetCompany
         {
             InitializeComponent();
             SetPlan(plan);
+            PrecioNumericUpDown.ValueChanged += PrecioNumericUpDown_ValueChanged;
+        }
+
+        private void PrecioNumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            Plan.Precio = PrecioNumericUpDown.Value;
         }
 
         void SetPlan(Plan plan)
