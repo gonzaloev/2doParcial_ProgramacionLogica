@@ -48,7 +48,11 @@ namespace IsteaTVInternetCompany
 
             foreach (Canal c in registros)
             {
-                BaseDeDatos.Canales.Add(c);
+                //No pueden haber canales repetidos
+                if (BaseDeDatos.Canales.Find((Canal x) => x.Nro == c.Nro) == null)
+                {
+                    BaseDeDatos.Canales.Add(c);
+                }
             }
 
             RefrescarLista();

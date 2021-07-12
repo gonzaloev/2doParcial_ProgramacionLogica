@@ -48,7 +48,12 @@ namespace IsteaTVInternetCompany
 
             foreach (Plan p in registros)
             {
-                BaseDeDatos.Planes.Add(p);
+                //No pueden haber 2 planes con el mismo nombre
+                if (BaseDeDatos.Planes.Find((Plan x) => x.Nombre == p.Nombre) == null)
+                {
+                    BaseDeDatos.Planes.Add(p);
+                }
+                
             }
 
             RefrescarLista();
