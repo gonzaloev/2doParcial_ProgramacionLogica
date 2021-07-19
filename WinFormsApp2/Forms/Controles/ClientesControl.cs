@@ -12,20 +12,20 @@ namespace IsteaTVInternetCompany
 {
     public partial class ClientesControl : UserControl
     {
-        Titular Titular;
+        Cliente Titular;
         public ClientesControl()
         {
             InitializeComponent();
         }
 
-        public ClientesControl(Titular titular)
+        public ClientesControl(Cliente titular)
         {
             InitializeComponent();
             SetTitular(titular);
 
         }
 
-        void SetTitular(Titular t)
+        void SetTitular(Cliente t)
         {
             Titular = t;
 

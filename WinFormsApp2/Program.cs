@@ -16,11 +16,8 @@ namespace IsteaTVInternetCompany
         {
             //int index = chanel.FindAll((Canales elem) => elem.Cnombres == "Telefe" && elem.Canal == 12);
 
-
-            BaseDeDatos.CargarPlanes();
-            BaseDeDatos.CargarTitular();
-            BaseDeDatos.CargarCanal();
-            BaseDeDatos.CargarPeliculas();
+            //Si la cantidad de entidades crece, no tenemos que modificar todo.
+            BaseDeDatos.CargarDatos();
 
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();

@@ -26,10 +26,11 @@ namespace IsteaTVInternetCompany
 
         private void CrearButton_Click(object sender, EventArgs e)
         {
-            if(this.PlanTextBox.Text == "" || this.TvTextBox2.Text == "" || this.InternetTextBox.Text == "" || this.numericUpDown1.Value <= 0)
+            if (this.PlanTextBox.Text == "" || this.TvTextBox2.Text == "" || this.InternetTextBox.Text == "" && (this.numericUpDown1.Minimum >= 0 || this.numericUpDown1.Value <= 0))
             {
                 MessageBox.Show("Campos vacios.");
-            }else
+            }
+            else
             {
                 Plan pl = new Plan()
                 {
@@ -45,5 +46,6 @@ namespace IsteaTVInternetCompany
                 this.Hide();
             }
         }
+
     }
 }

@@ -17,11 +17,11 @@ namespace IsteaTVInternetCompany
         public RecuperacionClave(int indexUsuario)
         {
             InitializeComponent();
-            this.usuarioLabel.Text = BaseDeDatos.Clientes[indexUsuario].Usuario;
+            this.usuarioLabel.Text = BaseDeDatos.Usuarios[indexUsuario].Nombre;
             index = indexUsuario;            
             this.recuperarBtn.Click += RecuperarBtn_Click;
             this.cambiarBtn.Click += CambiarBtn_Click;
-            this.preguntaLabel.Text = BaseDeDatos.Clientes[indexUsuario].Pregunta;
+            this.preguntaLabel.Text = BaseDeDatos.Usuarios[indexUsuario].Pregunta;
             
         }
 
@@ -29,7 +29,7 @@ namespace IsteaTVInternetCompany
         private void RecuperarBtn_Click(object sender, EventArgs e)
         {
             string respuesta = this.respuestaTextBox.Text;
-            if(respuesta == BaseDeDatos.Clientes[index].Respuesta)
+            if(respuesta == BaseDeDatos.Usuarios[index].Respuesta)
             {
                 MessageBox.Show("Respuesta Valida, ingrese su nueva Contraseña");
                 respuestaTextBox.Enabled = false;
@@ -57,7 +57,7 @@ namespace IsteaTVInternetCompany
             }
             else if (claveTextBox.Text == repitaTextBox.Text)
             {
-                BaseDeDatos.Clientes[index].Clave = claveTextBox.Text;
+                BaseDeDatos.Usuarios[index].Clave = claveTextBox.Text;
                 MessageBox.Show("Cambio de clave exitoso!");
                 this.Hide();
                 Principal form = new Principal();

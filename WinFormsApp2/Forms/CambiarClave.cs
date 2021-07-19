@@ -36,7 +36,7 @@ namespace IsteaTVInternetCompany
             }
             else if(this.NuevaClaveTextBox.Text == this.ReingresaClaveTextBox.Text)
             {
-                BaseDeDatos.Clientes[index].Clave = this.NuevaClaveTextBox.Text;
+                BaseDeDatos.Usuarios[index].Clave = this.NuevaClaveTextBox.Text;
                 MessageBox.Show("Clave actualizada con exito!");
                 this.Hide();
             }
@@ -44,7 +44,7 @@ namespace IsteaTVInternetCompany
 
         private void ValidarButton_Click(object sender, EventArgs e)
         {
-            if(BaseDeDatos.Clientes[index].Clave == this.ClaveActualTextBox.Text)
+            if(BaseDeDatos.Usuarios[index].Clave == this.ClaveActualTextBox.Text)
             {
                 MessageBox.Show("Clave Verificada.");
                 ClaveActualTextBox.Enabled = false;

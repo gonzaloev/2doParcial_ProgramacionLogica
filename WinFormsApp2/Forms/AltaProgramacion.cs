@@ -12,6 +12,7 @@ namespace IsteaTVInternetCompany
 {
     public partial class AltaProgramacion : Form
     {
+       
         public AltaProgramacion()
         {
             InitializeComponent();
@@ -22,9 +23,14 @@ namespace IsteaTVInternetCompany
 
         private void GuardarBtn_Click(object sender, EventArgs e)
         {
-            if(this.numericUpDown1.Value <= 0 || this.NombreTextBox.Text == "")
+            int indexNro = BaseDeDatos.Canales.FindIndex((Canal c) => c.Nro == this.numericUpDown1.Value);
+
+            if (this.numericUpDown1.Value <= 0 || this.NombreTextBox.Text == "")
             {
                 MessageBox.Show("Campos vacios o invalidos.");
+            }else if (indexNro != -1)
+                  {
+                MessageBox.Show("El canal con ese número ya existe.");
             }
             else
             {
@@ -33,9 +39,9 @@ namespace IsteaTVInternetCompany
                     Nombre = this.NombreTextBox.Text,
                     Nro = this.numericUpDown1.Value
                 };
-
                 BaseDeDatos.Canales.Add(cn);
                 MessageBox.Show("Canal creado con exito");
+
                 this.Hide();
             }
         }

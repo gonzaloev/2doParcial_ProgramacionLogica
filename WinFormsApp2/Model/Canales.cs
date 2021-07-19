@@ -9,6 +9,7 @@ namespace IsteaTVInternetCompany
      public class Canal
      {
         public string Nombre { get; set; }
+       
         public decimal Nro { get; set; }
 
         public Pelicula CPelicula { get; set; }

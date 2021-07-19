@@ -9,86 +9,98 @@ namespace IsteaTVInternetCompany
     public static class BaseDeDatos
     {
         //Ingreso
+        public static List<Usuario> Usuarios = new List<Usuario>();
+
+        //Titular tiene dentro Contacto domicilio y plan
         public static List<Cliente> Clientes = new List<Cliente>();
-        public static void CargarCliente()
+
+        //Gestion de Plan VER COMO METER PRECIO
+        public static List<Plan> Planes = new List<Plan>();
+
+        //Gestion de progamacion
+        public static List<Canal> Canales = new List<Canal>();
+
+        public static List<Pelicula> peliculas = new List<Pelicula>();
+
+
+        public static void CargarUsuarios()
         {
-            Cliente cl = new Cliente()
+            Usuario cl = new Usuario()
             {
-                Usuario = "istea",
+                Nombre = "istea",
                 Clave = "12345",
                 Pregunta = "De que color era el caballo blanco de San Martin",
                 Respuesta = "Blanco"
             };
 
-            Clientes.Add(cl);
+            Usuarios.Add(cl);
 
-            cl = new Cliente()
+            cl = new Usuario()
             {
-                Usuario = "martitab",
+                Nombre = "martitab",
                 Clave = "holasi123",
                 Pregunta = "La respuesta es 123",
                 Respuesta = "123"
             };
 
-            Clientes.Add(cl);
+            Usuarios.Add(cl);
         }
-        
+
 
         // Detalle de cliente y Gestion 
 
-        //Titular tiene dentro Contacto domicilio y plan
-        public static List<Titular> Titulares = new List<Titular>();
-        public static void CargarTitular()
+
+        public static void CargarClientes()
         {
-          
-            Titular pepito = new Titular()
+
+            Cliente pepito = new Cliente()
             {
                 Nombre = "Daniel",
                 Nro = "123",
                 DNI = "14516413",
                 Estatus = true,
-                TContacto = new Contacto()
+                Contacto = new Contacto()
                 {
                     email = "tronchatoro@algo.com",
                     telefono = "4564123"
                 },
-                TDomicilio = new Domicilio()
+                Domicilio = new Domicilio()
                 {
                     Direccion = "calle falsa 123",
                     Localidad = "Pilar",
                     Provincia = "Buenos Aires"
 
-                }, 
-                TPlan = Planes[0]
-               //TPlan = new Plan()
-               //{
-               //    Nombre = "Super Basico",
-               //    Tv = "Marvel",
-               //    Internet = "30Meg",
-               //    Precio = 30
-               //} 
+                },
+                Plan = Planes[0]
+                //TPlan = new Plan()
+                //{
+                //    Nombre = "Super Basico",
+                //    Tv = "Marvel",
+                //    Internet = "30Meg",
+                //    Precio = 30
+                //} 
             };
 
-            Titulares.Add(pepito);
+            Clientes.Add(pepito);
 
-            pepito = new Titular()
+            pepito = new Cliente()
             {
                 Nombre = "Daniel",
                 Nro = "123",
                 DNI = "14516413",
                 Estatus = true,
-                TContacto = new Contacto()
+                Contacto = new Contacto()
                 {
                     email = "tronchatoro@algo.com",
                     telefono = "4564123"
                 },
-                TDomicilio = new Domicilio()
+                Domicilio = new Domicilio()
                 {
                     Direccion = "calle falsa 123",
                     Localidad = "Pilar",
                     Provincia = "Buenos Aires"
                 },
-                TPlan = Planes[1]
+                Plan = Planes[1]
                 /*TPlan = new Plan()
                 {
                     Nombre = "Super Basico",
@@ -98,25 +110,25 @@ namespace IsteaTVInternetCompany
                 }*/
             };
 
-            Titulares.Add(pepito);
-            pepito = new Titular()
+            Clientes.Add(pepito);
+            pepito = new Cliente()
             {
                 Nombre = "Marcos",
                 Nro = "123",
                 DNI = "14516413",
                 Estatus = true,
-                TContacto = new Contacto()
+                Contacto = new Contacto()
                 {
                     email = "tronchatoro@algo.com",
                     telefono = "4564123"
                 },
-                TDomicilio = new Domicilio()
+                Domicilio = new Domicilio()
                 {
                     Direccion = "calle falsa 123",
                     Localidad = "Pilar",
                     Provincia = "Buenos Aires"
                 },
-                TPlan = Planes[2]
+                Plan = Planes[2]
                 /*TPlan = new Plan()
                 {
                     Nombre = "Super Basico",
@@ -125,12 +137,9 @@ namespace IsteaTVInternetCompany
                     Precio = 90
                 }  */
             };
-            Titulares.Add(pepito); 
+            Clientes.Add(pepito);
         }
-        
 
-        //Gestion de Plan VER COMO METER PRECIO
-        public static List<Plan> Planes = new List<Plan>();
 
         public static void CargarPlanes()
         {
@@ -186,9 +195,7 @@ namespace IsteaTVInternetCompany
 
 
 
-        //Gestion de progamacion
-        public static List<Canal> Canales = new List<Canal>();
-        public static void CargarCanal()
+        public static void CargarCanales()
         {
 
             Canal t = new Canal()
@@ -277,52 +284,51 @@ namespace IsteaTVInternetCompany
             Canales.Add(a);
         }
 
-        public static List<Pelicula> peliculas = new List<Pelicula>();
         public static void CargarPeliculas()
         {
             Pelicula peliculas1 = new Pelicula()
             {
                 Nombre = "Xmen",
                 Duracion = "128",
-                HHHorario = new DateTime(year: 2021, month: 1, day: 1, hour: 22,minute: 54,second: 00)
-                
+                HHHorario = new DateTime(year: 2021, month: 1, day: 1, hour: 22, minute: 54, second: 00)
+
             };
-            
+
             Pelicula peliculas2 = new Pelicula()
             {
                 Nombre = "Vengadores",
                 Duracion = "128",
                 HHHorario = new DateTime(year: 2021, month: 1, day: 1, hour: 8, minute: 30, second: 00)
             };
-            
+
             Pelicula peliculas3 = new Pelicula()
             {
                 Nombre = "Titanic",
                 Duracion = "128",
                 HHHorario = new DateTime(year: 2021, month: 1, day: 1, hour: 9, minute: 00, second: 00)
             };
-            
+
             Pelicula peliculas4 = new Pelicula()
             {
                 Nombre = "El niño de Pijama a Rayas",
                 Duracion = "128",
                 HHHorario = new DateTime(year: 2021, month: 1, day: 1, hour: 7, minute: 00, second: 00)
             };
-            
+
             Pelicula peliculas5 = new Pelicula()
             {
                 Nombre = "Tiburon 4 ",
                 Duracion = "128",
                 HHHorario = new DateTime(year: 2021, month: 1, day: 1, hour: 12, minute: 00, second: 00)
             };
-            
+
             Pelicula peliculas6 = new Pelicula()
             {
                 Nombre = "Shrek",
                 Duracion = "128",
                 HHHorario = new DateTime(year: 2021, month: 1, day: 1, hour: 12, minute: 30, second: 00)
             };
-            
+
             peliculas.Add(peliculas1);
             peliculas.Add(peliculas2);
             peliculas.Add(peliculas3);
@@ -332,13 +338,20 @@ namespace IsteaTVInternetCompany
         }
 
 
+        public static void CargarDatos()
+        {
+            CargarUsuarios();
+            CargarPlanes();
+            CargarClientes();
+            CargarCanales();
+            CargarPeliculas();
+        }
 
 
 
 
 
 
-        
         /*
          * Al final no los usamos.
          * 

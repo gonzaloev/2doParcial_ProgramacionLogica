@@ -37,8 +37,8 @@ namespace IsteaTVInternetCompany
                 MessageBox.Show("Los campos no coinciden.");
             } else if (this.NuevaPreguntaTextBox.Text == this.RepitaPreguntaTextBox.Text && this.NuevaRespuestaTextBox.Text == this.RepitaRespuestaTextBox.Text)
             {
-                BaseDeDatos.Clientes[index].Pregunta = this.NuevaPreguntaTextBox.Text;
-                BaseDeDatos.Clientes[index].Respuesta = this.NuevaRespuestaTextBox.Text;
+                BaseDeDatos.Usuarios[index].Pregunta = this.NuevaPreguntaTextBox.Text;
+                BaseDeDatos.Usuarios[index].Respuesta = this.NuevaRespuestaTextBox.Text;
                 MessageBox.Show("Pregunta y respuesta de seguridad actualizadas con exito.");
                 this.Hide();
             }
@@ -50,10 +50,10 @@ namespace IsteaTVInternetCompany
             {
                 MessageBox.Show("Campos vacios.");
             }
-            else if(BaseDeDatos.Clientes[index].Pregunta != this.PreguntaActualTextBox.Text || BaseDeDatos.Clientes[index].Respuesta != this.RespuestaActualTextBox.Text)
+            else if(BaseDeDatos.Usuarios[index].Pregunta != this.PreguntaActualTextBox.Text || BaseDeDatos.Usuarios[index].Respuesta != this.RespuestaActualTextBox.Text)
             {
                 MessageBox.Show("Pregunta o Respuesta de seguridad invalidas");
-            }else if (BaseDeDatos.Clientes[index].Pregunta == this.PreguntaActualTextBox.Text && BaseDeDatos.Clientes[index].Respuesta == this.RespuestaActualTextBox.Text)
+            }else if (BaseDeDatos.Usuarios[index].Pregunta == this.PreguntaActualTextBox.Text && BaseDeDatos.Usuarios[index].Respuesta == this.RespuestaActualTextBox.Text)
             {
                 MessageBox.Show("Validacion exitosa");
                 this.PreguntaActualTextBox.Enabled = false;
